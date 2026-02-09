@@ -29,80 +29,77 @@
                 </header>
 
                 <nav class="d-flex justify-content-end gap-2 mb-4">
-                    <button class="btn btn-outline-primary btn-sm">Imprimir reporte</button>
-                    <button class="btn btn-outline-success btn-sm">Exportar a Excel</button>
-                    <button class="btn btn-danger btn-sm">Cerrar sesión</button>
+                    <a class="btn btn-sm btn-outline-primary" href="#">Imprimir reporte</a>
+                    <a class="btn btn-sm btn-outline-success" href="#">Exportar a Excel</a>
+                    <a class="btn btn-sm btn-danger" href="#">Cerrar sesión</a>
                 </nav>
 
                 <section>
                     <h5 class="text-secondary mb-3">Horarios asignados al docente</h5>
                     
                     <div class="table-responsive">
-                    <table class="table">
-                    <caption>Horarios asignados al docente</caption>
-
-                    <thead>
-                        <tr>
-                            <th scope="col">Código</th>
-                            <th scope="col">Asignatura</th>
-                            <th scope="col">Grupo</th>
-                            <th scope="col">Día</th>
-                            <th scope="col">Horario</th>
-                            <th scope="col">Aula</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>0413</td>
-                            <td>Programación Web</td>
-                            <td>Gpo1</td>
-                            <td>Martes</td>
-                            <td>10:00 - 11:40</td>
-                            <td>E201</td>
-                        </tr>
-                        <tr>
-                            <td>0413</td>
-                            <td>Programación Web</td>
-                            <td>Gpo1</td>
-                            <td>Jueves</td>
-                            <td>15:00 - 16:40</td>
-                            <td>E201</td>
-                        </tr>
-                        <tr>
-                            <td>0402</td>
-                            <td>Introducción a Ingeniería</td>
-                            <td>Gpo3</td>
-                            <td>Lunes</td>
-                            <td>08:00 - 09:40</td>
-                            <td>D104</td>
-                        </tr>
-                        <tr>
-                            <td>0402</td>
-                            <td>Introducción a Ingeniería</td>
-                            <td>Gpo3</td>
-                            <td>Miércoles</td>
-                            <td>08:00 - 09:40</td>
-                            <td>D104</td>
-                        </tr>
-                        <tr>
-                            <td>0402</td>
-                            <td>Introducción a Ingeniería</td>
-                            <td>Gpo4</td>
-                            <td>Lunes</td>
-                            <td>10:00 - 11:40</td>
-                            <td>E201</td>
-                        </tr>
-                        <tr>
-                            <td>0402</td>
-                            <td>Introducción a Ingeniería</td>
-                            <td>Gpo4</td>
-                            <td>Jueves</td>
-                            <td>08:00 - 09:40</td>
-                            <td>E201</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <table class="table table-striped table-hover align-middle border">
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col">Código</th>
+                                    <th scope="col">Asignatura</th>
+                                    <th scope="col">Grupo</th>
+                                    <th scope="col">Día</th>
+                                    <th scope="col">Horario</th>
+                                    <th scope="col">Aula</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0413</td>
+                                    <td>Programación Web</td>
+                                    <td><span class="badge text-bg-info">Gpo1</span></td>
+                                    <td>Martes</td>
+                                    <td>10:00 - 11:40</td>
+                                    <td><span class="badge text-bg-dark">E201</span></td>
+                                </tr>
+                                <tr>
+                                    <td>0413</td>
+                                    <td>Programación Web</td>
+                                    <td><span class="badge text-bg-info">Gpo1</span></td>
+                                    <td>Jueves</td>
+                                    <td>15:00 - 16:40</td>
+                                    <td><span class="badge text-bg-dark">E201</span></td>
+                                </tr>
+                                <tr>
+                                    <td>0402</td>
+                                    <td>Introducción a Ingeniería</td>
+                                    <td><span class="badge text-bg-info">Gpo3</span></td>
+                                    <td>Lunes</td>
+                                    <td>08:00 - 09:40</td>
+                                    <td><span class="badge text-bg-dark">D104</span></td>
+                                </tr>
+                                <tr>
+                                    <td>0402</td>
+                                    <td>Introducción a Ingeniería</td>
+                                    <td><span class="badge text-bg-info">Gpo3</span></td>
+                                    <td>Miércoles</td>
+                                    <td>08:00 - 09:40</td>
+                                    <td><span class="badge text-bg-dark">D104</span></td>
+                                </tr>
+                                <tr>
+                                    <td>0402</td>
+                                    <td>Introducción a Ingeniería</td>
+                                    <td><span class="badge text-bg-info">Gpo4</span></td>
+                                    <td>Lunes</td>
+                                    <td>10:00 - 11:40</td>
+                                    <td><span class="badge text-bg-dark">E201</span></td>
+                                </tr>
+                                <tr>
+                                    <td>0402</td>
+                                    <td>Introducción a Ingeniería</td>
+                                    <td><span class="badge text-bg-info">Gpo4</span></td>
+                                    <td>Jueves</td>
+                                    <td>08:00 - 09:40</td>
+                                    <td><span class="badge text-bg-dark">E201</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </section>
             </div>
