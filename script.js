@@ -45,5 +45,54 @@ function renderLista() {
     contenedor.innerHTML = html;
 }
 
+function renderCalendario() {
+    let html = `
+        <h5 class="text-secondary mb-3">Calendario de Clases</h5>
+        <div class="table-responsive shadow-lg rounded-3">
+            <table class="table table-bordered text-center align-middle bg-white">
+                <thead class="table-dark">
+                    <tr>
+                        <th style="width: 100px;">Hora</th>
+                        ${dias.map(d => `<th>${d}</th>`).join('')}
+                    </tr>
+                </thead>
+                <tbody>`;
+
+    // Eje Y: Bucle de horas (8 a 20)
+    for (let h = 8; h <= 20; h++) {
+        html += `<tr><td class="fw-bold bg-light">${h}:00</td>`;
+        
+        dias.forEach(dia => {
+            const clase = horarios.find(item => item.dia === dia && item.hora === h);
+            if (clase) {
+                html += `
+                    <td class="table-${clase.color} p-2 shadow-sm">
+                        <div class="small fw-bold text-uppercase">${clase.nombre}</div>
+                        <div class="badge text-bg-dark">${clase.aula}</div>
+                    </td>`;
+            } else {
+                // Celda Vacía
+                html += `<td class="text-muted small" style="opacity: 0.3;">-</td>`;
+            }
+        });
+        html += `</tr>`;
+    }
+    html += `</tbody></table></div>`;
+    contenedor.innerHTML = html;
+}
+
+
+btnToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (vistaActual === 'lista') {
+        renderCalendario();
+        vistaActual = 'calendario';
+        btnToggle.textContent = "Ver Lista";
+    } else {
+        renderLista();
+        vistaActual = 'lista';
+        btnToggle.textContent = "Vista Lista | Calendario";
+    }
+});
 
 renderLista();
