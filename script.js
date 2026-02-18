@@ -1,4 +1,4 @@
-// 1. Los datos: Un solo lugar para toda la información
+
 const horarios = [
     { cod: "0413", nombre: "Programación Web", gpo: "Gpo1", dia: "Martes", hora: 10, aula: "E201", color: "danger" },
     { cod: "0413", nombre: "Programación Web", gpo: "Gpo1", dia: "Jueves", hora: 15, aula: "E201", color: "danger" },
@@ -13,6 +13,37 @@ const horarios = [
 ];
 
 const dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
+let vistaActual = 'lista'; // Estado inicial
 
-// Carga inicial
+const btnToggle = document.querySelector('.btn-outline-dark');
+const contenedor = document.querySelector('section');
+
+function renderLista() {
+    let html = `
+        <h5 class="text-secondary mb-3">Reporte Oficial de Horarios</h5>
+        <div class="table-responsive shadow-lg rounded-3">
+            <table class="table table-striped table-hover align-middle border">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Código</th><th>Asignatura</th><th>Grupo</th><th>Día</th><th>Horario</th><th>Aula</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${horarios.map(h => `
+                        <tr>
+                            <td>${h.cod}</td>
+                            <td class="fw-bold">${h.nombre}</td>
+                            <td><span class="badge text-bg-${h.color}">${h.gpo}</span></td>
+                            <td>${h.dia}</td>
+                            <td>${h.hora}:00 - ${h.hora + 1}:40</td>
+                            <td><span class="badge text-bg-dark">${h.aula}</span></td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>`;
+    contenedor.innerHTML = html;
+}
+
+
 renderLista();
